@@ -1,0 +1,16 @@
+{
+  "name": "sunnyside-agency-landing-page-main",
+  "version": "1.0.0",
+  "description": "![Design preview for the Sunnyside agency landing page coding challenge](./design/desktop-preview.jpg)",
+  "main": "index.html",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build --no-minify index.html"
+  },
+  "author": "Jesus Ramirez",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^1.12.3",
+    "sass": "^1.35.1"
+  }
+}
