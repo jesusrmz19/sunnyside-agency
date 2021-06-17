@@ -14,6 +14,7 @@
     background-size: cover;
   }
   h2 {
+    width: 100%;
     font-size: 35px;
     text-align: center;
     color: $white;
@@ -23,5 +24,16 @@
     letter-spacing: 5px;
     position: absolute;
     top: 25%;
+  }
+  @include respond(S) {
+    h2 {
+      font-size: 55px;
+    }
+  }
+  @include respond(M) {
+    &--img {
+      background: url('../img/desktop/image-header.jpg') center no-repeat;
+      background-size: cover;
+    }
   }
 }

@@ -6,11 +6,24 @@
   justify-content: space-between;
   align-items: center;
   padding: 0.8rem;
+  z-index: 10;
   h1 {
     font-family: $REGfont;
     font-weight: $w600;
     color: $white;
     font-size: 25px;
+  }
+  @include respond(S) {
+    padding: 1rem 2rem;
+    h1 {
+      width: 100%;
+    }
+  }
+  @include respond(M) {
+    padding: 1rem 2.5rem;
+    h1 {
+      font-size: 30px;
+    }
   }
 }
 
@@ -20,6 +33,7 @@
   height: 25px;
   width: 25px;
   position: relative;
+  cursor: pointer;
   .line {
     position: absolute;
     top: 50%;
@@ -35,4 +49,100 @@
       top: 80%;
     }
   }
+  @include respond(S) {
+    display: none;
+  }
+}
+
+/* -- NAV MENU -- */
+.nav--container {
+  display: none;
+  z-index: 10;
+  position: absolute;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: $white;
+  width: 90%;
+  padding: 1rem 0;
+  &::after {
+    content: '';
+    position: absolute;
+    --width: 25px;
+    --half: calc((var(--width)) / 2);
+    width: var(--width);
+    height: var(--width);
+    background: transparent;
+    top: calc(-1 * var(--width));
+    right: 0;
+    border-bottom: var(--half) solid $white;
+    border-right: var(--half) solid $white;
+    border-left: var(--half) solid transparent;
+    border-top: var(--half) solid transparent;
+  }
+  ul {
+    text-align: center;
+  }
+  .link {
+    cursor: pointer;
+    list-style-type: none;
+    text-transform: capitalize;
+    font-family: $REGfont;
+    color: $vdarkgrayblue;
+    padding: 1em 0;
+    &--contact {
+      font-size: 16px;
+      font-family: $BOLDfont;
+      color: $darkblue;
+      text-transform: uppercase;
+      position: relative;
+      &::before {
+        content: '';
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        position: absolute;
+        height: 85%;
+        width: 50%;
+        border-radius: 50px;
+        background: $yellow;
+        z-index: -1;
+      }
+    }
+  }
+  @include respond(S) {
+    display: block;
+    background: transparent;
+    position: static;
+    width: 100%;
+    max-width: 450px;
+    transform: translateX(0%);
+    &::after {
+      display: none;
+    }
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .link {
+      color: $white;
+      width: 100%;
+      font-size: 15px;
+      &--contact {
+        margin-left: 20px;
+        padding: 1em 0.8em;
+        width: 100%;
+        color: $darkblue;
+        background: $white;
+        border-radius: 50px;
+        &::before {
+          display: none;
+        }
+      }
+    }
+  }
+}
+.nav--container.open {
+  display: block;
 }
