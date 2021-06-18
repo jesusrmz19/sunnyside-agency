@@ -1,0 +1,70 @@
+.testimonials {
+  width: 100%;
+  padding: 3rem 0;
+  h3 {
+    font-family: $BOLDfont;
+    text-transform: uppercase;
+    color: $grayblue;
+    letter-spacing: 2px;
+    font-size: 20px;
+    text-align: center;
+  }
+  @include respond(L) {
+    padding: 0;
+    margin: 8.5rem auto;
+  }
+}
+
+.clients {
+  margin: 0 auto;
+  .client {
+    font-family: $REGfont;
+    text-align: center;
+    width: 85%;
+    margin: 0 auto;
+    margin-top: 3.5rem;
+    &--avantar {
+      height: 90px;
+      width: 90px;
+      border-radius: 50%;
+      margin: 0 auto;
+    }
+    &--testimonial {
+      margin: 1.5rem 0;
+      line-height: 1.5;
+      color: $vdarkgrayblue;
+    }
+    &--name {
+      font-family: $BOLDfont;
+      margin-bottom: 0.3rem;
+    }
+    &--position {
+      color: $grayblue;
+      font-size: 16px;
+    }
+  }
+  @include respond(S) {
+    width: 60%;
+  }
+  @include respond(L) {
+    display: flex;
+    width: 80%;
+    .client {
+      &--testimonial {
+        margin: 3rem 0;
+      }
+    }
+    .client + .client {
+      margin-left: 50px;
+    }
+  }
+}
+
+$avatars: emily, thomas, jennie;
+
+@each $avatar in $avatars {
+  .#{$avatar} {
+    background: url('../img/image-#{$avatar}.jpg') center no-repeat;
+    background-size: cover;
+  }
+}

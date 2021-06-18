@@ -1,0 +1,59 @@
+.services {
+  width: 100%;
+  &--section {
+    height: 100vh;
+    position: relative;
+  }
+  &--txt {
+    position: absolute;
+    left: 50%;
+    bottom: 3rem;
+    transform: translateX(-50%);
+    width: 90%;
+    text-align: center;
+    h3 {
+      font-family: $BOLDfont;
+      font-size: 30px;
+    }
+    P {
+      font-family: $REGfont;
+      margin: 1.5rem 0;
+      line-height: 1.5;
+      font-size: 16px;
+    }
+  }
+  @include respond(S) {
+    display: flex;
+    &--section {
+      height: 60vh;
+      width: 100%;
+    }
+  }
+  @include respond(L) {
+    &--section {
+      height: 80vh;
+    }
+    &--txt {
+      width: 50%;
+    }
+  }
+}
+
+.design {
+  background: url('../img/mobile/image-graphic-design.jpg') center no-repeat;
+  background-size: cover;
+  color: $darkcyan;
+  @include respond(M) {
+    background: url('../img/desktop/image-graphic-design.jpg') center no-repeat;
+    background-size: cover;
+  }
+}
+.photography {
+  background: url('../img/mobile/image-photography.jpg') center no-repeat;
+  background-size: cover;
+  color: $darkblue;
+  @include respond(M) {
+    background: url('../img/desktop/image-photography.jpg') center no-repeat;
+    background-size: cover;
+  }
+}

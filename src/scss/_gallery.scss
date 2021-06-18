@@ -1,0 +1,29 @@
+$imgs: milkbottles, orange, cone, sugarcubes;
+
+.gallery {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  &--img {
+    height: 30vh;
+    width: 50%;
+  }
+  @include respond(L) {
+    &--img {
+      width: 25%;
+      height: 60vh;
+    }
+  }
+}
+
+@each $img in $imgs {
+  .#{$img} {
+    background: url('../img/mobile/image-gallery-#{$img}.jpg') center no-repeat;
+    background-size: cover;
+    @include respond(M) {
+      background: url('../img/desktop/image-gallery-#{$img}.jpg') center
+        no-repeat;
+      background-size: cover;
+    }
+  }
+}
