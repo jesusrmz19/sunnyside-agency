@@ -1,0 +1,43 @@
+.footer {
+    width: 100%;
+    background: $moderatecyan;
+    color: $darkcyan;
+    &--txt {
+        padding: 2rem 0;
+        width: 20%;
+        margin: 0 auto;
+        text-align: center;
+        border: 1px solid red;
+    }
+    &--title {
+        font-family: $REGfont;
+        font-weight: $w900;
+        font-size: 30px;
+    }
+    &--nav {
+        margin: 1.5rem 0 3rem 0;
+        justify-content: space-between;
+        list-style-type: none;
+        font-family: $REGfont;
+        text-transform: capitalize;
+        a {
+            color: inherit;
+            opacity: 0.7;
+            text-decoration: none;
+            &:hover {
+                color: $white;
+            }
+        }
+    }
+    &--socials {
+        list-style-type:none;
+        justify-content: space-around;
+        a {
+            text-decoration: none;
+            text-transform: uppercase;
+            svg {
+                fill: $darkcyan;
+            }
+        }
+    }
+}

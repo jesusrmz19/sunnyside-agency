@@ -136,8 +136,13 @@
         color: $darkblue;
         background: $white;
         border-radius: 50px;
+        transition: all ease 0.2s;
         &::before {
           display: none;
+        }
+        &:hover{
+          color: $white;
+          background: rgba(255,255,255, 0.4);
         }
       }
     }
