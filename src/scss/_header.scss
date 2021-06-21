@@ -9,7 +9,7 @@
   z-index: 10;
   h1 {
     font-family: $REGfont;
-    font-weight: $w600;
+    font-weight: $w900;
     color: $white;
     font-size: 25px;
   }
@@ -140,9 +140,9 @@
         &::before {
           display: none;
         }
-        &:hover{
+        &:hover {
           color: $white;
-          background: rgba(255,255,255, 0.4);
+          background: rgba(255, 255, 255, 0.4);
         }
       }
     }

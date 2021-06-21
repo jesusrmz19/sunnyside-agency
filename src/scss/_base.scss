@@ -1,10 +1,10 @@
 /* --- FONT --- */
-@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600;900&family=Fraunces:wght@700;900&display=swap');
 
 $REGfont: 'Barlow', sans-serif;
-$w600: 600;
-/* Weights: 600 */
 $BOLDfont: 'Fraunces', serif;
+
+$w600: 600;
 $w700: 700;
 $w900: 900;
 /* Weights: 700, 900 */
@@ -12,8 +12,8 @@ $w900: 900;
 /* --- PRIMARY --- */
 $softred: hsl(7, 99%, 70%);
 $yellow: hsl(51, 100%, 49%);
-$darkcyan: hsl(167, 40%, 24%);
-$moderatecyan: hsl(168, 44%, 51%);
+$darkcyan: hsl(167, 46%, 30%);
+$moderatecyan: hsl(167, 44%, 69%);
 $darkblue: hsl(198, 62%, 26%);
 
 /* --- SECONDARY --- */
